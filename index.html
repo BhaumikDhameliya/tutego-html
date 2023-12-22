@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutego</title>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("./fonts/Satoshi/Satoshi-Regular.otf");
+      }
+    </style>
+  </head>
+  <body class="font-satoshi">
+    <!-- TopRibbon -->
+    <div class="p-3 bg-primary">
+      <div class="flex flex-wrap justify-center text-white divide-x">
+        <p class="px-4">
+          Mobile:&nbsp;
+          <a href="tel:+0800/8883467">0800/8883467</a>
+        </p>
+        <p class="px-4">
+          Email:&nbsp;
+          <a href="mailto:info@tutego.de">info@tutego.de</a>
+        </p>
+      </div>
+      <div class="flex justify-center gap-6">
+        <div class="flex justify-center gap-6 py-1">
+          <img
+            src="./assets/svgs/Linkedin.svg"
+            alt="Linkedin"
+            class="w-6 h-6"
+          />
+          <img src="./assets/svgs/Youtube.svg" alt="Youtube" class="w-6 h-6" />
+          <img src="./assets/svgs/Twitter.svg" alt="Twitter" class="w-6 h-6" />
+          <img
+            src="./assets/svgs/Facebook.svg"
+            alt="Facebook"
+            class="w-6 h-6"
+          />
+        </div>
+        <div class="flex items-center gap-1 text-white">
+          <p>English</p>
+          <img src="./assets/svgs/dropdown.svg" alt="Dropdown" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar  -->
+    <div class="flex justify-between p-4 bg-white shadow-lg">
+      <img src="./assets/svgs/logo.svg" alt="logo" class="h-10 w-28" />
+      <img src="./assets/svgs/MenuIcon.svg" alt="menu" />
+    </div>
+
+    <div class="flex flex-col gap-16 px-5 py-14">
+      <!-- HeroText  -->
+      <div class="">
+        <div class="flex flex-col items-start gap-9">
+          <p class="text-4xl font-black text-dark-active">
+            Join the revolution of IT training and redefine your skills
+          </p>
+          <p class="text-lg text-dark-normal">
+            With a track record spanning more than two decades, we bring
+            extensive experience to the table, offering corporate training,
+            individual instruction, and workshops tailored for software
+            developers and decision-makers.
+          </p>
+        </div>
+
+        <!-- SearchSection -->
+        <div class="flex flex-col items-start gap-6">
+          <div class="flex flex-col items-start w-full gap-3 mt-8">
+            <input
+              type="text"
+              placeholder="Search for a seminar"
+              class="w-full py-4 rounded px-7 drop-shadow-2xl"
+            />
+            <button class="px-12 py-4 text-white rounded-md bg-primary">
+              Search
+            </button>
+          </div>
+          <div class="text-dark-normal">
+            Popular searches:&nbsp;
+            <span class="underline underline-offset-4">Java</span>,
+            <span class="underline underline-offset-4">Database</span>,
+            <span class="underline underline-offset-4">
+              System administrator
+            </span>
+          </div>
+          <div class="relative w-full h-80">
+            <img
+              src="./assets/images/top-banner.png"
+              alt="tute1"
+              class="absolute max-w-[130%] right-0 h-80"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- TrustedBySection  -->
+      <div class="flex flex-col">
+        <div class="text-3xl font-black text-primary">
+          <p>Trusted by</p>
+          <p>top companies</p>
+        </div>
+        <div class="flex overflow-auto gap-x-10">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/70ed/17d8/9817ca2591f52d6183a24e5a79046657?Expires=1704067200&Signature=Exl24MpecnDrJ7SYX0MRiOxrg7AAzVpFag8m~UURpaX0paDJ6AxIb~m7etJNGZrIN~fLI7xtWzzLf8b4boDabLk976jDe0gidu2ZtzTC33ZccmaU8nuoaFd8rpWyrSqDrKlkxJYbe-MjlDP9mO55RrqMc7f~DUXkrG9LH~DF0vbMpZGdne2xkAlvS0WntXhF0XB4vZlXaSWIfi2VWvJw-0CpyB768oXRScRRojeOB6cvFahYA~tasGD7ZOm8n~JnUOiojXoOPdYahHNlvO2iHqpQk~k6P8L0TmJGl9AFnFMzCA4gV0qQuCCaswFr3OUL-oxPWOa2daJ1s0SzecX6Uw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt="siemens"
+            class="max-h-20"
+          />
+          <img
+            src="https://s3-alpha-sig.figma.com/img/4ee6/b8c7/5479d7994ec53871bc057fc916a06132?Expires=1704067200&Signature=b5jdYqHNSaSfirSB1Bf080dFb41vHRMs2eyxLunebLwCMXt2OEGtN8Unz~kNXe4~yKy704L~kdn9G~n3BPssAHs3DZ02mhHH4BKoW92wWueEKb1RFXvhakpH4Anlk1JmsOEChZ0QwoKY4XzGGGUknZ1LMQ99u7SapF1MgSfV4ZbLGc6tkXcYYe9IqreF37t6nLnGa7dsKs~-wM-E3dcbAAD46jK~ec48Us9gAJNhfqgZwIH2s~Q4ZPzCb59okOtAfS3Go0yOSckrx3N8EkXUzYSGRh7zrmu9UI6fmwKdQofgac~SPCdHW8USOZPgq3p7muekmKcz5BgiZjyjWUYC-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt="tsystems"
+            class="max-h-20"
+          />
+
+          <img
+            src="https://s3-alpha-sig.figma.com/img/587d/a0e9/786e794fc389434a5fe774a71d85f86d?Expires=1704067200&Signature=f8zQh94kzZAS3jy~yMC5oM1lMwaoyAhnLzOlg3iQc8hjDdmjLF8CbpuWI3bjnfP1VPG9ZbCd0tBB9NbnEoh1uRIv9oZpS5bC4zb2z4lXEOFFTmsDBtbMjQScZldY0hWOMr8qX9FCNdsQiI5sERiIkE4I7R4QLZjp~iFz9S7jak2ofJKg7MFrCg1g0O86HHO5L-xssxgrgK9vXyoR4ViGHOpVdUcJlG1lX9HSB6C7PQO~Z9BgtOkol2YoXzt25LnSrO~kxVu8tZBaQM56L66whXYdbDI47oQ-CP2fCtWfmw-3vn-8t2V2lbNjbBLZipZ07B9PFZp-tyOizrsf4a30fA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt="rossmann"
+            class="max-h-20"
+          />
+
+          <img
+            src="https://s3-alpha-sig.figma.com/img/426e/ea71/a486c2817cc128e6c8718a81dcc4e783?Expires=1704067200&Signature=IzTowpupfzeQAaHv0w7KVlC~oFYGPnK~ZqLOOavdV0d6rRi7VOkaWjs~EV2HObzof-3jqYDzqewb41KbjUpUuJMIB05qY8aMBBwXzNxSM~pL16cevSBiJm8S-OshKGq5cHSsq3ghAZuk8EUGcLoBTB~OcLMvev3-A3rCLfODpLOTxM6YsTYI~3WquBZAgYLRuY9X4S30KO~FC4lWeIaqJalr7aldiAyQR8bP2Ae2qEZbqJ5JyBOY0BCY6P46DvxzOGEjK3vxvpoLhawYEsuangqxe4EvTfFomFya8n7Syaj--oMWqm-0E43cywaQP~ZwyeJ2lOM36jmyqT6WU92IRw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt="tomtom"
+            class="max-h-20"
+          />
+        </div>
+      </div>
+
+      <!-- WhyTutegoSection  -->
+      <div class="flex flex-col gap-9">
+        <div class="flex flex-col gap-6">
+          <div class="text-3xl font-black text-primary">
+            <p>Why tutego</p>
+          </div>
+          <p class="text-lg text-dark-normal">
+            Embark on a journey of IT mastery. Guided by visionary insight,
+            we're your gateway to professional excellence in the world of
+            technology.
+          </p>
+        </div>
+        <div class="flex flex-col items-start gap-9">
+          <div
+            class="flex flex-col items-start p-12 border rounded-lg gap-9 border-dark-lighter"
+          >
+            <div
+              class="flex items-center justify-center p-3 rounded-[10px] w-16 h-16 bg-orange-light"
+            >
+              <img src="./assets/svgs/trophy.svg" alt="trophy" />
+            </div>
+            <div class="flex flex-col items-start gap-4">
+              <p class="text-lg font-bold text-dark-active">
+                Champions of excellence
+              </p>
+              <p class="text-lg text-dark-normal">
+                Christian Ullenboom's distinction as a “Java Champion” sets the
+                tone for our commitment to excellence. We're not just educators;
+                we're cultivators of mastery.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-start p-12 border rounded-lg gap-9 border-dark-lighter"
+          >
+            <div
+              class="flex items-center justify-center p-3 rounded-[10px] w-16 h-16 bg-orange-light"
+            >
+              <img src="./assets/svgs/course-up.svg" alt="trophy" />
+            </div>
+            <div class="flex flex-col items-start gap-4">
+              <p class="text-lg font-bold text-dark-active">
+                Precision-paced learning
+              </p>
+              <p class="text-lg text-dark-normal">
+                Our seminars aren't just education; they're transformation.
+                Immerse yourself in hands-on learning that equips you with
+                practical skills for real-world impact.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-start p-12 border rounded-lg gap-9 border-dark-lighter"
+          >
+            <div
+              class="flex items-center justify-center p-3 rounded-[10px] w-16 h-16 bg-orange-light"
+            >
+              <img src="./assets/svgs/globe.svg" alt="globeIcon" />
+            </div>
+            <div class="flex flex-col items-start gap-4">
+              <p class="text-lg font-bold text-dark-active">
+                Beyond boundaries
+              </p>
+              <p class="text-lg text-dark-normal">
+                Operating across Germany, Austria, and Switzerland, our
+                influence knows no bounds. Connect with a network of IT
+                enthusiasts and experts who've turned education into exceptional
+                careers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-start gap-8">
+          <div class="flex flex-col items-center justify-center w-full gap-4">
+            <div class="flex items-start justify-between w-full gap-14">
+              <div class="flex flex-col items-start gap-2.5">
+                <p class="text-2xl font-black text-dark-active">1000+</p>
+                <p class="text-dark-normal">Seminars and videos</p>
+              </div>
+              <div class="flex flex-col items-start gap-2.5">
+                <p class="text-2xl font-black text-dark-active">500+</p>
+                <p class="text-dark-normal">Students enrolled</p>
+              </div>
+            </div>
+            <div class="flex items-start justify-between w-full gap-14">
+              <div class="flex flex-col items-start gap-2.5">
+                <p class="text-2xl font-black text-dark-active">6000+</p>
+                <p class="text-dark-normal">Advice session</p>
+              </div>
+              <div class="flex flex-col items-start gap-2.5">
+                <p class="text-2xl font-black text-dark-active">100%</p>
+                <p class="text-dark-normal">Satisfaction rate</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col items-start gap-8">
+            <button class="px-12 py-4 text-white rounded-md bg-primary">
+              GET IN TOUCH
+            </button>
+          </div>
+          <img
+            src="https://s3-alpha-sig.figma.com/img/dfb8/9edc/531a7f600213a4ec0a1a72bd2450a32a?Expires=1704067200&Signature=Pjcj59mCrjF8lRkZLdKCz7vmx7r-lWI9mSTfuHyHCDpJl9NPhxDEW7Id7o-E0lqkzcpqMUWjq0-s4rYWloBo6V~wKx-YuMqxqtwt-fiX--XMaLdMCwhRDKRCqtRgMoEH8e4C0nnu2OKdBUobz3RoBpuN1rRIRhfYOHYRih-CraXyVwn-z6M~CzqOqOPg85x6tCTQbfdNun6JkTsVq2jcOKtYYGL0p-TbfzxDgplqkEqW8LloONMZuJFLXzYYWN~FDQl1fDb2FsX1OlhqQdmiPlcenVhoMxeOs~WORn-U2DeF~mCdQX4Kc7LZC8EMZ2g0cMB0YTP0BGRFlMtFJ~cFkQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt=""
+            class="object-cover rounded-3xl h-96"
+          />
+        </div>
+      </div>
+
+      <!-- TopCategories  -->
+      <div class="flex flex-col items-start gap-9">
+        <div class="flex flex-col items-start gap-9">
+          <div class="flex flex-col items-start gap-6">
+            <div class="text-3xl font-black text-primary">
+              <p>Explore top featured categories</p>
+            </div>
+            <p class="text-lg text-dark-normal">
+              Embracing the heightened effectiveness, tutego is actively
+              pursuing the successful concept of tailor-made in-house training.
+            </p>
+          </div>
+          <div class="flex items-start gap-9">
+            <div
+              class="flex flex-col items-start border border-dark-lighter rounded-xl"
+            >
+              <img
+                src="https://s3-alpha-sig.figma.com/img/6044/2354/2584455e22f1d3e9095fba0305bd6f15?Expires=1704067200&Signature=BRUubIlFJMi8-kyBu4VjrfIlM9gP7Xzi8c8~F5sF1DPCunpSGaG1TzfsYGOVWQ4DSsfiQYQOsyKYJV8n9GtsUSWtPX9API7hoDONJ1MfequLj4ez~t6oN~vmxlNBrfPXybX1EnqS8onv5G2ZSW3N1jbD6Lcgfk~22Iaz8UCL2KOgPQyZ0qggP~KMWp2QQJv1haIeza~AQyyfQaZujrTEm1~K4KC~fFNd-cSi6YtKPZJtfg2C2ouSiZ2Oa-~PJDvziOjyXNG-K8KJZlVRCxYqyiZHTdpv2H0azs4o0EvSE03iDaygqw0XkjGLbQxR1fI5OnPXs93RrtMwbC8b2YWRLA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                class="rounded-t-lg"
+              />
+              <div
+                class="flex flex-col items-start px-12 py-8 rounded-b-xl gap-9"
+              >
+                <div class="flex flex-col items-start gap-3">
+                  <div class="flex gap-2">
+                    <div
+                      class="flex py-0.5 px-2 gap-2.5 justify-center items-center rounded-sm bg-light-light-active"
+                    >
+                      <p class="text-xs text-dark-light-hover">Java</p>
+                    </div>
+                    <div
+                      class="flex py-0.5 px-2 gap-2.5 justify-center items-center rounded-sm bg-light-light-active"
+                    >
+                      <p class="text-xs text-dark-light-hover">C++</p>
+                    </div>
+                    <div
+                      class="flex py-0.5 px-2 gap-2.5 justify-center items-center rounded-sm bg-light-light-active"
+                    >
+                      <p class="text-xs text-dark-light-hover">SAP</p>
+                    </div>
+                    <div
+                      class="flex py-0.5 px-2 gap-2.5 justify-center items-center rounded-sm bg-light-light-active"
+                    >
+                      <p class="text-xs text-dark-light-hover">XML</p>
+                    </div>
+                  </div>
+                  <p class="text-lg font-bold text-dark-dark-active">
+                    Software development
+                  </p>
+                  <p class="text-lg text-dark-normal">
+                    Sharpen your coding prowess and software engineering skills
+                    in our dynamic seminar. From coding best practices to
+                    version control, join us to craft efficient and innovative
+                    applications.
+                  </p>
+                  <p class="w-full font-bold text-right text-primary">
+                    Enroll now →
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start gap-9">
+            <div
+              class="flex flex-col items-start border border-dark-lighter rounded-xl"
+            >
+              <img
+                src="https://s3-alpha-sig.figma.com/img/6044/2354/2584455e22f1d3e9095fba0305bd6f15?Expires=1704067200&Signature=BRUubIlFJMi8-kyBu4VjrfIlM9gP7Xzi8c8~F5sF1DPCunpSGaG1TzfsYGOVWQ4DSsfiQYQOsyKYJV8n9GtsUSWtPX9API7hoDONJ1MfequLj4ez~t6oN~vmxlNBrfPXybX1EnqS8onv5G2ZSW3N1jbD6Lcgfk~22Iaz8UCL2KOgPQyZ0qggP~KMWp2QQJv1haIeza~AQyyfQaZujrTEm1~K4KC~fFNd-cSi6YtKPZJtfg2C2ouSiZ2Oa-~PJDvziOjyXNG-K8KJZlVRCxYqyiZHTdpv2H0azs4o0EvSE03iDaygqw0XkjGLbQxR1fI5OnPXs93RrtMwbC8b2YWRLA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                class="rounded-t-lg"
+              />
+              <div
+                class="flex flex-col items-start px-12 py-8 rounded-b-xl gap-9"
+              >
+                <div class="flex flex-col items-start gap-3">
+                  <div class="flex gap-2">
+                    <div
+                      class="flex py-0.5 px-2 gap-2.5 justify-center items-center rounded-sm bg-light-light-active"
+                    >
+                      <p class="text-xs text-dark-light-hover">Apache</p>
+                    </div>
+                    <div
+                      class="flex py-0.5 px-2 gap-2.5 justify-center items-center rounded-sm bg-light-light-active"
+                    >
+                      <p class="text-xs text-dark-light-hover">Open LDAP</p>
+                    </div>
+                    <div
+                      class="flex py-0.5 px-2 gap-2.5 justify-center items-center rounded-sm bg-light-light-active"
+                    >
+                      <p class="text-xs text-dark-light-hover">Samba</p>
+                    </div>
+                  </div>
+                  <p class="text-lg font-bold text-dark-dark-active">
+                    System administration and networks
+                  </p>
+                  <p class="text-lg text-dark-normal">
+                    Learn to configure, secure, and optimize systems, networks,
+                    and servers for smooth operations and robust cybersecurity.
+                  </p>
+                  <p class="w-full font-bold text-right text-primary">
+                    Enroll now →
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ParticipantReview  -->
+      <div class="flex flex-col gap-9">
+        <div class="flex">
+          <div class="flex flex-col text-primary">
+            <p class="text-2xl">We admire voice of success,</p>
+            <p class="text-3xl font-black">
+              Hear what our participants have to say
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-9">
+          <div
+            class="flex flex-col items-start p-12 border rounded-lg gap-9 border-dark-lighter"
+          >
+            <div class="flex flex-col items-start gap-4">
+              <div class="flex flex-col items-start gap-1">
+                <p class="text-lg font-bold text-dark-dark-active">
+                  John Smith
+                </p>
+                <p class="text-sm text-dark-normal">Software Engineer</p>
+              </div>
+              <p class="text-dark-normal">
+                In publishing and graphic design, Lorem ipsum is a placeholder
+                text commonly used to demonstrate the visual form of a document
+                or a typeface without relying on meaningful content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ReadyToEmbarkSection -->
+    <div class="px-5 py-16 text-white bg-primary">
+      <div
+        class="inline-flex flex-col items-center justify-center gap-6 text-center"
+      >
+        <p class="text-[40px] font-black leading-[48px]">
+          Ready to embark on a journey of IT excellence?
+        </p>
+        <p class="text-lg">
+          Join our transformative seminars and elevate your skills to new
+          heights. Whether you're a budding developer, a data enthusiast, a web
+          design aficionado, or an aspiring IT administrator, our expert-led
+          courses are tailored to meet your needs.
+        </p>
+        <button
+          class="px-12 py-4 text-lg font-medium bg-white rounded-md text-primary"
+        >
+          Get in touch
+        </button>
+      </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="inline-flex flex-col items-start gap-16 px-5 py-14">
+      <div class="flex flex-col items-start gap-6">
+        <img src="./assets/svgs/logo.svg" alt="logo" class="w-40" />
+        <p class="text-dark-normal">
+          At <span class="font-bold">tutego</span>, we're passionate about
+          shaping tech enthusiasts into industry leaders. With a legacy of
+          excellence, our seminars provide hands-on learning, expert guidance,
+          and cutting-edge insights. Join us to fuel your IT journey and unlock
+          a world of opportunities.
+        </p>
+        <div class="flex w-full rounded drop-shadow">
+          <input
+            type="text"
+            placeholder="Subscribe to our newsletter"
+            class="w-full px-6 py-4"
+          />
+          <button class="p-2 text-white rounded-md bg-primary">
+            <img src="./assets/svgs/send.svg" alt="sendIcon" />
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-col gap-8 text-dark-normal">
+        <p class="text-lg font-bold text-primary">Popular seminars</p>
+        <div class="flex flex-col gap-2 5">
+          <p>Introduction to Java</p>
+          <p>Advanced Java</p>
+          <p>Java EE</p>
+          <p>Spring boat</p>
+          <p>Build Management Maven</p>
+          <p>JavaServer Faces (JSF)</p>
+          <p>PrimeFaces</p>
+          <p>Testing with JUnit</p>
+          <p>JavaScript</p>
+          <p>Secure web applications</p>
+          <p>Vue.js</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-8 text-dark-normal">
+        <p class="text-lg font-bold text-primary">Company</p>
+        <div class="flex flex-col gap-2 5">
+          <p>About</p>
+          <p>Leadership</p>
+          <p>Virtual seminars</p>
+          <p>Privacy policy</p>
+          <p>Counselor</p>
+          <p>Java is also an island</p>
+          <p>More than an island</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-8 text-dark-normal">
+        <p class="text-lg font-bold text-primary">Quick links</p>
+        <div class="flex flex-col gap-2 5">
+          <p>Seminars</p>
+          <p>Advice</p>
+          <p>FAQ</p>
+          <p>Credentials</p>
+          <p>Contact</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
