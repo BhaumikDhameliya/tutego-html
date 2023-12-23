@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutego</title>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("./fonts/Satoshi/Satoshi-Regular.otf");
+      }
+    </style>
+    <link href="styles/index.css" rel="stylesheet">
+</head>
+
+<body class="font-satoshi">
+    <!-- TopRibbon -->
+    <div class="flex flex-col p-3 bg-primary md:flex-row md:justify-between md:px-28">
+        <div class="flex flex-wrap justify-center text-white divide-x">
+            <p class="px-4">
+                Mobile:&nbsp;
+                <a href="tel:+0800/8883467">0800/8883467</a>
+            </p>
+            <p class="px-4">
+                Email:&nbsp;
+                <a href="mailto:info@tutego.de">info@tutego.de</a>
+            </p>
+        </div>
+        <div class="flex justify-center gap-6 md:flex-row-reverse">
+            <div class="flex justify-center gap-6 py-1">
+                <img src="assets/svgs/Linkedin.svg" alt="Linkedin" class="w-6 h-6" />
+                <img src="assets/svgs/Youtube.svg" alt="Youtube" class="w-6 h-6" />
+                <img src="assets/svgs/Twitter.svg" alt="Twitter" class="w-6 h-6" />
+                <img src="assets/svgs/Facebook.svg" alt="Facebook" class="w-6 h-6" />
+            </div>
+            <div class="flex items-center gap-1 text-white">
+                <p>English</p>
+                <img src="assets/svgs/dropdown.svg" alt="Dropdown" />
+            </div>
+        </div>
+    </div>
+    <div class="relative flex items-center justify-between p-4 bg-white shadow-lg md:px-28">
+        <img src="assets/svgs/logo.svg" alt="logo" class="h-10 w-28 md:h-12" />
+        <button class="md:hidden" id="hamburger-icon-button">
+            <img src="assets/svgs/MenuIcon.svg" alt="menu" />
+        </button>
+        <div class="absolute right-1 flex flex-col text-white md:items-center md:justify-between md:gap-12 md:flex md:flex-row md:static bg-primary md:bg-transparent md:text-dark-dark-active top-[76px] rounded-md gap-3 p-2 md:p-0 hidden z-50"
+            id="nav-menu">
+            <nav>
+                <ul class="flex flex-col items-center gap-3 md:flex-row md:gap-12">
+                    <li class="nav-link">
+                        <a href="/" class=""> Home </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/about.html" class=""> About </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/advice.html" class=""> Advice </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/seminar.html" class=""> Seminar </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/blog.html" class=""> Blog </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="/contact.html">
+                <button class="px-9 py-3.5 text-primary bg-white md:text-white rounded-md md:bg-primary">
+                    Get in touch
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex flex-col overflow-hidden">
+        <div
+            class="relative flex flex-col gap-6 px-5 text-white bg-no-repeat bg-cover bg-primary md:px-28 py-7 md:gap-12">
+            <div class="z-10 flex items-center gap-4">
+                <a href="/" class="">
+                    Home
+                </a>
+                <a href="/seminar" class="">
+                    Seminars
+                </a>
+            </div>
+            <div class="z-10 inline-flex flex-col max-w-lg gap-4 p-16">
+                <p class="text-3xl font-black text-center md:text-5xl">
+                    Java SE, Jakarta EE (Java EE)
+                </p>
+            </div>
+            <div
+                class="absolute w-48 h-24 top-20 -right-10 bg-opacity-10 bg-gradient-to-r from-primary to-orange-gradient">
+            </div>
+            <div
+                class="hidden md:block absolute w-48 h-24 top-32 rounded-[73px] -left-10 bg-opacity-10 bg-gradient-to-r from-primary to-orange-gradient">
+            </div>
+            <div
+                class="absolute w-24 h-48 -bottom-20 md:left-1/2 rounded-[73px] bg-opacity-10 bg-gradient-to-t from-primary to-orange-gradient">
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col gap-8 px-5 md:px-28 py-11">
+        <div class="overflow-auto">
+            <table class="rounded text-[10px] md:text-sm border-b border-dark-border min-w-full">
+                <tr class="items-center px-4 py-2 text-white border-b rounded-t white bg-primary whitespace-nowrap">
+                    <th class="px-4 py-2 font-medium rounded-tl">Sl. No.</th>
+                    <th class="px-4 py-2 font-medium">Course name</th>
+                    <th class="px-4 py-2 font-medium">Tags</th>
+                    <th class="px-4 py-2 font-medium rounded-tr">Duration</th>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">1</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">Java basics</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">JAVA1</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        1 day
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">2</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        Java for advanced users
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">JAVA2</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        4 days
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">3</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        Java for C# programmers
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">CS2JAVA</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        4 days
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">4</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        Java for C++ programmers
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">CPP2JAVA</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        4 days
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">5</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        Java at a glance for decision-makers
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">JAVABIZ</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        4 days
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">6</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        Build Management with Ant
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">ANTBUILD</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        2 days
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">7</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        Aspect-oriented programming with AspectJ
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">ASPECTJ</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        2 days
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">8</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 max-w-xs">
+                        Web services with Apache Axis2
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">AXIS2</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        2 days
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">9</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        Model business processes with BPEL/jBPM
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        BPEL/ jBPMBPELJBPM
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        2 days
+                    </td>
+                </tr>
+                <tr class="border-b border-dark-border">
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">10</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">
+                        Report design and generation with Eclipse BIRT
+                    </td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4">BIRT</td>
+                    <td class="px-4 py-2.5 md:px-6 md:py-4 whitespace-nowrap">
+                        2 days
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="flex items-center justify-center w-full">
+            <div class="flex items-center justify-between max-w-xl gap-8 px-5">
+                <div>
+                    <img src="assets/svgs/rexicon-chevron-left.svg" alt="" />
+                </div>
+                <button class="px-2 rounded bg-primary">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <div>
+                    <img src="assets/svgs/rexicon-chevron-right.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center px-5 py-16 text-white bg-primary">
+        <div class="inline-flex flex-col items-center justify-center gap-6 text-center md:max-w-2xl">
+            <p class="text-[40px] font-black leading-[48px]">
+                Ready to embark on a journey of IT excellence?
+            </p>
+            <p class="text-lg">
+                Join our transformative seminars and elevate your skills to new
+                heights. Whether you&apos;re a budding developer, a data enthusiast,
+                a web design aficionado, or an aspiring IT administrator, our
+                expert-led courses are tailored to meet your needs.
+            </p>
+            <button class="px-12 py-4 text-lg font-medium bg-white rounded-md text-primary">
+                Get in touch
+            </button>
+        </div>
+    </div>
+    <div class="inline-flex flex-col items-start w-full gap-16 px-5 py-14 md:px-28 md:flex-row md:justify-between">
+        <div class="flex flex-col items-start gap-6 md:max-w-sm">
+            <img src="assets/svgs/logo.svg" alt="logo" class="w-40" />
+            <p class="text-dark-normal ">
+                At <span class="font-bold">tutego</span>,
+                we're passionate about shaping tech enthusiasts into
+                industry leaders. With a legacy of excellence, our seminars provide
+                hands-on learning, expert guidance, and cutting-edge insights. Join us
+                to fuel your IT journey and unlock a world of opportunities.
+            </p>
+            <div class="flex w-full rounded drop-shadow">
+                <input type="text" placeholder="Subscribe to our newsletter" class="w-full px-6 py-4" />
+                <button class="p-2 text-white rounded-md bg-primary">
+                    <img src="assets/svgs/send.svg" alt="sendIcon" />
+                </button>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+            <p class="text-lg font-bold text-primary">Popular seminars</p>
+            <div class="flex flex-col gap-2 5">
+                <p>Introduction to Java</p>
+                <p>Advanced Java</p>
+                <p>Java EE</p>
+                <p>Spring boat</p>
+                <p>Build Management Maven</p>
+                <p>JavaServer Faces (JSF)</p>
+                <p>PrimeFaces</p>
+                <p>Testing with JUnit</p>
+                <p>JavaScript</p>
+                <p>Secure web applications</p>
+                <p>Vue.js</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+            <p class="text-lg font-bold text-primary">Company</p>
+            <div class="flex flex-col gap-2 5">
+                <p>About</p>
+                <p>Leadership</p>
+                <p>Virtual seminars</p>
+                <p>Privacy policy</p>
+                <p>Counselor</p>
+                <p>Java is also an island</p>
+                <p>More than an island</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+            <p class="text-lg font-bold text-primary">Quick links</p>
+            <div class="flex flex-col gap-2 5">
+                <p>Seminars</p>
+                <p>Advice</p>
+                <p>FAQ</p>
+                <p>Credentials</p>
+                <p>Contact</p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

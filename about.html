@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutego</title>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("./fonts/Satoshi/Satoshi-Regular.otf");
+      }
+    </style>
+    <link href="styles/index.css" rel="stylesheet">
+  </head>
+  <body class="font-satoshi">
+    <div class="flex flex-col">
+      <!-- TopRibbon -->
+      <div
+        class="flex flex-col p-3 bg-primary md:flex-row md:justify-between md:px-28"
+      >
+        <div class="flex flex-wrap justify-center text-white divide-x">
+          <p class="px-4">
+            Mobile:&nbsp;
+            <a href="tel:+0800/8883467">0800/8883467</a>
+          </p>
+          <p class="px-4">
+            Email:&nbsp;
+            <a href="mailto:info@tutego.de">info@tutego.de</a>
+          </p>
+        </div>
+        <div class="flex justify-center gap-6 md:flex-row-reverse">
+          <div class="flex justify-center gap-6 py-1">
+            <img
+              src="assets/svgs/Linkedin.svg"
+              alt="Linkedin"
+              class="w-6 h-6"
+            />
+            <img src="assets/svgs/Youtube.svg" alt="Youtube" class="w-6 h-6" />
+            <img src="assets/svgs/Twitter.svg" alt="Twitter" class="w-6 h-6" />
+            <img
+              src="assets/svgs/Facebook.svg"
+              alt="Facebook"
+              class="w-6 h-6"
+            />
+          </div>
+          <div class="flex items-center gap-1 text-white">
+            <p>English</p>
+            <img src="assets/svgs/dropdown.svg" alt="Dropdown" />
+          </div>
+        </div>
+      </div>
+      <div
+      class="relative flex items-center justify-between p-4 bg-white shadow-lg md:px-28"
+    >
+      <img src="assets/svgs/logo.svg" alt="logo" class="h-10 w-28 md:h-12" />
+      <button class="md:hidden" id="hamburger-icon-button">
+        <img src="assets/svgs/MenuIcon.svg" alt="menu" />
+      </button>
+      <div
+        class="absolute right-1 flex flex-col text-white md:items-center md:justify-between md:gap-12 md:flex md:flex-row md:static bg-primary md:bg-transparent md:text-dark-dark-active top-[76px] rounded-md gap-3 p-2 md:p-0 hidden z-50"
+        id="nav-menu"
+      >
+        <nav>
+          <ul class="flex flex-col items-center gap-3 md:flex-row md:gap-12">
+            <li class="nav-link">
+              <a href="/" class=""> Home </a>
+            </li>
+            <li class="nav-link">
+              <a href="/about.html" class=""> About </a>
+            </li>
+            <li class="nav-link">
+              <a href="/advice.html" class=""> Advice </a>
+            </li>
+            <li class="nav-link">
+              <a href="/seminar.html" class=""> Seminar </a>
+            </li>
+            <li class="nav-link">
+              <a href="/blog.html" class=""> Blog </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="/contact.html">
+          <button
+            class="px-9 py-3.5 text-primary bg-white md:text-white rounded-md md:bg-primary"
+          >
+            Get in touch
+          </button>
+        </a>
+      </div>
+    </div>
+
+      <div
+        class="relative flex justify-center overflow-hidden text-center text-white bg-primary"
+      >
+        <div
+          class="flex flex-col items-center justify-center max-w-3xl gap-3 px-8 py-12"
+        >
+          <p class="text-4xl font-black">
+            Empowering Tech Excellence Your Future Starts Here
+          </p>
+          <p class="text-lg">
+            Welcome to Tutego, where we ignite your IT potential. Established
+            with a passion for technology and a commitment to knowledge,
+            we&apos;ve been at the forefront of IT training and education.
+          </p>
+        </div>
+        <img
+          src="assets/images/person-rounded-1.png"
+          alt="person1"
+          class="absolute -top-2 -left-2.5 max-w-[60px] md:top-5 md:max-w-[95px] md:left-28"
+        />
+        <img
+          src="assets/images/person-rounded-2.png"
+          alt="person2"
+          class="absolute -top-2 -right-2.5 max-w-[60px] md:max-w-[95px] md:top-5 md:right-28"
+        />
+        <img
+          src="assets/images/person-rounded-3.png"
+          alt="person3"
+          class="absolute -bottom-2 -left-2.5 max-w-[80px] md:max-w-[95px] md:bottom-5 md:left-12"
+        />
+        <img
+          src="assets/images/person-rounded-4.png"
+          alt="person4"
+          class="absolute bottom-2 -right-2 max-w-[70px] md:max-w-[95px] md:bottom-5 md:right-36"
+        />
+        <img
+          src="assets/svgs/about-banner-mask.svg"
+          alt="aboutBannerMask"
+          class="absolute left-0"
+        />
+      </div>
+      <div class="flex flex-col gap-10 px-5 mt-28 md:px-28 md:gap-28">
+        <div class="flex flex-col gap-10 px-5 md:flex-row md:justify-between">
+          <div class="flex flex-col items-start gap-6 md:max-w-[50%]">
+            <p class="text-3xl font-black text-primary">
+              Discover endless possibilities through Tutego
+            </p>
+            <p class="text-dark-normal">
+              Are you prepared to commence a path of ongoing development and
+              knowledge acquisition? Through our seminars, a vast realm of
+              wisdom awaits you, breaking down boundaries and restrictions to
+              offer an unlimited supply of transformative educational materials,
+              ready to reshape your life.
+            </p>
+            <p class="text-dark-normal">
+              We are committed to your success. Whether you&apos;re looking to
+              enhance your IT skills, boost your career, or explore new horizons
+              in technology, [Your Institute Name] is your partner on this
+              exciting journey. Join us and discover the world of possibilities
+              that technology offers. Let&apos;s build a brighter future
+              together.
+            </p>
+          </div>
+          <img
+            src="assets/images/group-of-three.png"
+            alt="groupOfThreeImages"
+            class="md:max-h-[500px] md:h-[500px]"
+          />
+        </div>
+        <div class="flex flex-col gap-12 mb-16 md:mb-36">
+          <p class="text-3xl font-black text-primary md:text-center">
+            With Tutego, you get access to
+          </p>
+          <div
+            class="flex flex-col flex-wrap gap-3 md:flex-row md:justify-center"
+          >
+            <div class="flex items-start gap-6 p-8 bg-orange-light md:max-w-xl">
+              <img src="assets/svgs/check-circle.svg" alt="checkCircleIcon" />
+              <div class="flex flex-col gap-3">
+                <p class="text-xl font-medium text-primary">
+                  Expert-led seminars
+                </p>
+                <p class="text-orange-dark">
+                  Our seminars are meticulously crafted and delivered by
+                  industry-leading experts with years of hands-on experience.
+                  This means you&apos;ll learn directly from professionals who
+                  have navigated the complexities of the tech world, ensuring
+                  you gain practical insights and valuable industry knowledge.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6 p-8 bg-orange-light md:max-w-xl">
+              <img src="assets/svgs/check-circle.svg" alt="checkCircleIcon" />
+              <div class="flex flex-col gap-3">
+                <p class="text-xl font-medium text-primary">
+                  Tailored learning
+                </p>
+                <p class="text-orange-dark">
+                  We understand that each learner is unique. That&apos;s why we
+                  offer a range of training options to cater to your individual
+                  needs. Whether you prefer personalized one-on-one sessions or
+                  the camaraderie of group seminars, we adapt our approach to
+                  match your learning style and pace.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6 p-8 bg-orange-light md:max-w-xl">
+              <img src="assets/svgs/check-circle.svg" alt="checkCircleIcon" />
+              <div class="flex flex-col gap-3">
+                <p class="text-xl font-medium text-primary">
+                  Cutting-edge content
+                </p>
+                <p class="text-orange-dark">
+                  Technology evolves rapidly, and so do our courses. Our
+                  curriculum is continuously updated to stay in sync with the
+                  latest industry trends and demands. With us, you&apos;ll
+                  always be at the forefront of technology, equipped with the
+                  most relevant skills.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6 p-8 bg-orange-light md:max-w-xl">
+              <img src="assets/svgs/check-circle.svg" alt="checkCircleIcon" />
+              <div class="flex flex-col gap-3">
+                <p class="text-xl font-medium text-primary">
+                  Hands-on experience
+                </p>
+                <p class="text-orange-dark">
+                  We believe in learning by doing. Our hands-on approach ensures
+                  that you not only understand theoretical concepts but also
+                  gain practical experience. You&apos;ll work on real-world
+                  projects, allowing you to apply your newfound knowledge in
+                  tangible scenarios.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6 p-8 bg-orange-light md:max-w-xl">
+              <img src="assets/svgs/check-circle.svg" alt="checkCircleIcon" />
+              <div class="flex flex-col gap-3">
+                <p class="text-xl font-medium text-primary">Community</p>
+                <p class="text-orange-dark">
+                  Join a vibrant and supportive community of tech enthusiasts.
+                  Networking is a crucial aspect of professional growth, and our
+                  platform provides the perfect opportunity to connect with
+                  like-minded individuals, share ideas, and build valuable
+                  relationships within the tech industry.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6 p-8 bg-orange-light md:max-w-xl">
+              <img src="assets/svgs/check-circle.svg" alt="checkCircleIcon" />
+              <div class="flex flex-col gap-3">
+                <p class="text-xl font-medium text-primary">
+                  Proven track record
+                </p>
+                <p class="text-orange-dark">
+                  With a history of successful graduates and satisfied learners,
+                  our institute has earned a reputation for excellence. Our
+                  alumni have gone on to excel in various tech-related fields,
+                  demonstrating the real-world value of our programs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center px-5 py-16 text-white bg-primary">
+        <div
+          class="inline-flex flex-col items-center justify-center gap-6 text-center md:max-w-2xl"
+        >
+          <p class="text-[40px] font-black leading-[48px]">
+            Ready to embark on a journey of IT excellence?
+          </p>
+          <p class="text-lg">
+            Join our transformative seminars and elevate your skills to new
+            heights. Whether you&apos;re a budding developer, a data enthusiast,
+            a web design aficionado, or an aspiring IT administrator, our
+            expert-led courses are tailored to meet your needs.
+          </p>
+          <button
+            class="px-12 py-4 text-lg font-medium bg-white rounded-md text-primary"
+          >
+            Get in touch
+          </button>
+        </div>
+      </div>
+      <div
+        class="inline-flex flex-col items-start w-full gap-16 px-5 py-14 md:px-28 md:flex-row md:justify-between"
+      >
+        <div class="flex flex-col items-start gap-6 md:max-w-sm">
+          <img src="assets/svgs/logo.svg" alt="logo" class="w-40" />
+          <p class="text-dark-normal">
+            At <span class="font-bold">tutego</span>, 
+            we're passionate about shaping tech enthusiasts into
+            industry leaders. With a legacy of excellence, our seminars provide
+            hands-on learning, expert guidance, and cutting-edge insights. Join
+            us to fuel your IT journey and unlock a world of opportunities.
+          </p>
+          <div class="flex w-full rounded drop-shadow">
+            <input
+              type="text"
+              placeholder="Subscribe to our newsletter"
+              class="w-full px-6 py-4"
+            />
+            <button class="p-2 text-white rounded-md bg-primary">
+              <img src="assets/svgs/send.svg" alt="sendIcon" />
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+          <p class="text-lg font-bold text-primary">Popular seminars</p>
+          <div class="flex flex-col gap-2 5">
+            <p>Introduction to Java</p>
+            <p>Advanced Java</p>
+            <p>Java EE</p>
+            <p>Spring boat</p>
+            <p>Build Management Maven</p>
+            <p>JavaServer Faces (JSF)</p>
+            <p>PrimeFaces</p>
+            <p>Testing with JUnit</p>
+            <p>JavaScript</p>
+            <p>Secure web applications</p>
+            <p>Vue.js</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+          <p class="text-lg font-bold text-primary">Company</p>
+          <div class="flex flex-col gap-2 5">
+            <p>About</p>
+            <p>Leadership</p>
+            <p>Virtual seminars</p>
+            <p>Privacy policy</p>
+            <p>Counselor</p>
+            <p>Java is also an island</p>
+            <p>More than an island</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+          <p class="text-lg font-bold text-primary">Quick links</p>
+          <div class="flex flex-col gap-2 5">
+            <p>Seminars</p>
+            <p>Advice</p>
+            <p>FAQ</p>
+            <p>Credentials</p>
+            <p>Contact</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

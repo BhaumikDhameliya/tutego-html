@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutego</title>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("./fonts/Satoshi/Satoshi-Regular.otf");
+      }
+    </style>
+    <script src="styles/index.css"></script>
+    <link href="styles/index.css" rel="stylesheet">
+</head>
+
+<body class="font-satoshi">
+    <!-- TopRibbon -->
+    <div class="flex flex-col p-3 bg-primary md:flex-row md:justify-between md:px-28">
+        <div class="flex flex-wrap justify-center text-white divide-x">
+            <p class="px-4">
+                Mobile:&nbsp;
+                <a href="tel:+0800/8883467">0800/8883467</a>
+            </p>
+            <p class="px-4">
+                Email:&nbsp;
+                <a href="mailto:info@tutego.de">info@tutego.de</a>
+            </p>
+        </div>
+        <div class="flex justify-center gap-6 md:flex-row-reverse">
+            <div class="flex justify-center gap-6 py-1">
+                <img src="assets/svgs/Linkedin.svg" alt="Linkedin" class="w-6 h-6" />
+                <img src="assets/svgs/Youtube.svg" alt="Youtube" class="w-6 h-6" />
+                <img src="assets/svgs/Twitter.svg" alt="Twitter" class="w-6 h-6" />
+                <img src="assets/svgs/Facebook.svg" alt="Facebook" class="w-6 h-6" />
+            </div>
+            <div class="flex items-center gap-1 text-white">
+                <p>English</p>
+                <img src="assets/svgs/dropdown.svg" alt="Dropdown" />
+            </div>
+        </div>
+    </div>
+    <div class="relative flex items-center justify-between p-4 bg-white shadow-lg md:px-28">
+        <img src="assets/svgs/logo.svg" alt="logo" class="h-10 w-28 md:h-12" />
+        <button class="md:hidden" id="hamburger-icon-button">
+            <img src="assets/svgs/MenuIcon.svg" alt="menu" />
+        </button>
+        <div class="absolute right-1 flex flex-col text-white md:items-center md:justify-between md:gap-12 md:flex md:flex-row md:static bg-primary md:bg-transparent md:text-dark-dark-active top-[76px] rounded-md gap-3 p-2 md:p-0 hidden z-50"
+            id="nav-menu">
+            <nav>
+                <ul class="flex flex-col items-center gap-3 md:flex-row md:gap-12">
+                    <li class="nav-link">
+                        <a href="/" class=""> Home </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/about.html" class=""> About </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/advice.html" class=""> Advice </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/seminar.html" class=""> Seminar </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/blog.html" class=""> Blog </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="/contact.html">
+                <button class="px-9 py-3.5 text-primary bg-white md:text-white rounded-md md:bg-primary">
+                    Get in touch
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="flex flex-col items-start gap-4 px-5 py-8 md:px-28 text-dark-normal">
+        <p class="font-black text-dark-dark-active text-[40px] md:text-6xl">
+            Java basics
+        </p>
+        <div class="flex gap-3 text-orange-dark-hover">
+            <div class="flex py-1 px-2 gap-2.5 justify-center items-center rounded-2xl bg-orange-light-active">
+                <p class="text-xs">Oracle Corporation</p>
+            </div>
+            <div class="flex py-1 px-2 gap-2.5 justify-center items-center rounded-2xl bg-orange-light-active">
+                <p class="text-xs">UML</p>
+            </div>
+            <div class="flex py-1 px-2 gap-2.5 justify-center items-center rounded-2xl bg-orange-light-active">
+                <p class="text-xs">Object orientation</p>
+            </div>
+            <div class="flex py-1 px-2 gap-2.5 justify-center items-center rounded-2xl bg-orange-light-active">
+                <p class="text-xs">Java</p>
+            </div>
+        </div>
+        <p class="max-w-5xl md:text-lg">
+            Because they are platform independent, Java programs can run on
+            different computer systems. Its high performance and robustness make
+            Java a popular language for critical server components. In this
+            seminar, participants will get to know the object-oriented language
+            Java using the current version. The training focuses on both syntax
+            and object-oriented design with Java and illustrates concepts such as
+            polymorphism and automatic garbage collection in many practical
+            examples. After the Java training, participants have a good overview
+            of the Java packages with their classes, interfaces and enumerations
+            and can program platform-independent applications.
+        </p>
+        <div class="relative flex max-w-5xl gap-5">
+            <p class="md:text-lg">
+                The course provides optimal preparation for the advanced Java
+                seminar, which deepens the Java standard libraries and provides an
+                overview of Java EE.
+            </p>
+            <img src="https://s3-alpha-sig.figma.com/img/ed4d/2196/1a01dfc652f3a1043516cde27646b3f8?Expires=1704067200&Signature=LPWGix1joP4i8R8BDY-NJsWBkzn-SyQrxSiAM6mJO6r4L2beDtWn-LpwGa2s3V5YcYhXUFiFDbc3A81jPHIAlj3fI-ZjxnzKd-d0CyYYXxDb9I14EdhaGuFT5YgFvPcSsL~YGloO23wBKcpOI9dTz4-iBQHxLlbSigx4cwzdIhBVvQXmvbjfXEG86RyxEa7h3~1C9txUoJGg71lgKH8Vk~faXJtrPqLKBVVozQfiNQ3-vrI2rOmZ7RDBCXNCmsrjjT1GtVgLOCDSTZOZkRNoMnB-FYyG8IjS1W9KFL2BlR9lYtL3EFeXu2HF~w~HqgPPHMCMkRHn-9HjULrWXdpxxA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt="" class="-right-32 bottom-20 md:absolute" />
+        </div>
+    </div>
+
+    <div>
+        <img src="https://s3-alpha-sig.figma.com/img/1c57/9978/a5f30d8e54605f4361ce96975dc1a0ae?Expires=1704067200&Signature=fHqM4A4RZ3ewa26d~~~vBkcDHRf0I-1RyQbIKXZW~zIhaW~Xmu3BOrPFi~Y2kc2DnFbtpk6Ut5oWGRaJu2oAx3T1IgHpeBTrXbCw~Ye9g7zakN6eKWaTF3x0NHfUwlJz5Avbsi8sIq6pwzydYgaoVvbevQs95Fo~A45FvPJ7XpWYrCb~NtVZGwiNF5WVucv2srIJ6sUej-dbv5fUEPjAlSwVe9HBtcMsxmbqGNDdu~JChPN9Nt6BDFGE7g5dkzuABS5OQ3K3Z8YECah7tLN39W3cVnUJ333GoirD8e3zmfKBGW8Auc36gULNACmIDQpOURglhxl8D5VDCreqbnQjPA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt="" class="w-full md:max-h-[500px] object-cover" />
+    </div>
+
+    <div class="px-5 py-12 md:px-28">
+        <div class="flex flex-col md:flex-row md:gap-6">
+            <div class="flex flex-col items-start gap-3 md:w-1/2">
+                <p class="text-[32px] font-black text-primary">
+                    Contents of the seminar
+                </p>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20">
+                        <p class="text-dark-dark-active">Introduction to Java</p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" />
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-2 py-3 pl-4 text-dark-normal">
+                        <div class="flex gap-3">
+                            <p>→</p>
+                            <p>Requirements analysis (requirements engineering)</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <p>→</p>
+                            <p>Architecture and design</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <p>→</p>
+                            <p>Microservices and service-oriented architectures</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <p>→</p>
+                            <p>Conception, system selection and implementation</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <p>→</p>
+                            <p>Determination of future application landscapes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">
+                            Basic language properties
+                        </p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">Use classes and objects</p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">String processing</p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">
+                            Declare classes, attributes and methods
+                        </p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">
+                            Reuse in object orientation
+                        </p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">The Java SE API</p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">Exceptions/Exceptions</p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">
+                            Advanced Java libraries and tools
+                        </p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full border-b border-dark-light-hover">
+                    <div class="flex items-center justify-between w-full gap-20 py-2">
+                        <p class="text-dark-dark-active">
+                            Advanced Java libraries and tools
+                        </p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 md:w-1/2 md:relative md:-top-48">
+                <div class="flex flex-col px-8 py-4 rounded-md bg-orange-light">
+                    <div class="flex flex-col items-start gap-4 border-b border-dark-light-hover pb-7">
+                        <div class="flex flex-col items-start gap-2.5">
+                            <p class="text-2xl font-black text-primary md:text-[40px] md:leading-[48px]">
+                                Start your learning journey today!
+                            </p>
+                            <p class="text-xs text-dark-normal md:text-lg">
+                                Get this seminar plus top-rated picks in tech skills and
+                                other popular topics.
+                            </p>
+                        </div>
+                        <button class="px-10 py-2 text-xs font-medium text-white rounded-md bg-primary md:text-lg">
+                            Enroll for seminar now
+                        </button>
+                    </div>
+                    <div class="flex flex-col mt-3 md:mt-8">
+                        <p class="text-lg font-black text-primary md:text-2xl">
+                            Training info
+                        </p>
+                        <div class="flex flex-col gap-4 text-xs md:text-lg text-orange-darker md:mt-5">
+                            <div class="flex justify-between gap-3">
+                                <p>Duration</p>
+                                <p class="text-right">5 days</p>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <p>Lessons</p>
+                                <p class="text-right">40 lessons of 45 minutes each</p>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <p>Target group</p>
+                                <p class="text-right">Software developers</p>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <p>Previous knowledge</p>
+                                <p class="text-right">
+                                    Programming knowledge in any programming language.
+                                </p>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <p>Seminar software</p>
+                                <p class="text-right">
+                                    The “Visual C# 2010 Express Edition” is used as the
+                                    standard development environment.
+                                </p>
+                            </div>
+                            <div class="flex justify-between gap-3 font-bold text-primary">
+                                <p>Program Fees</p>
+                                <p class="text-right">USD 1,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col px-8 py-3 rounded-md bg-orange-light">
+                    <div class="flex justify-between">
+                        <p class="text-lg font-black text-primary md:text-2xl">
+                            Categories
+                        </p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col px-8 py-3 rounded-md bg-orange-light">
+                    <div class="flex justify-between">
+                        <p class="text-lg font-black text-primary md:text-2xl">
+                            Further seminars
+                        </p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col px-8 py-3 rounded-md bg-orange-light">
+                    <div class="flex justify-between">
+                        <p class="text-lg font-black text-primary md:text-2xl">
+                            Interesting facts
+                        </p>
+                        <button>
+                            <img src="assets/svgs/angle-up.svg" alt="angleUpIcon" class="rotate-180" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col px-5 mt-20 md:m-0 gap-9 md:mt-0">
+            <div class="flex">
+                <div class="flex flex-col text-primary">
+                    <p class="">We admire voice of success,</p>
+                    <p class="text-3xl font-black leading-8">
+                        Hear what our participants have to say
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-9">
+                <div class="flex flex-col items-start max-w-sm p-12 border rounded-lg gap-9 border-dark-lighter">
+                    <div class="flex flex-col items-start gap-4">
+                        <div class="flex flex-col items-start gap-1">
+                            <p class="text-lg font-bold text-dark-dark-active">
+                                John Smith
+                            </p>
+                            <p class="text-sm text-dark-normal">Software Engineer</p>
+                        </div>
+                        <p class="text-dark-normal">
+                            In publishing and graphic design, Lorem ipsum is a placeholder
+                            text commonly used to demonstrate the visual form of a
+                            document or a typeface without relying on meaningful content.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-start max-w-sm p-12 border rounded-lg gap-9 border-dark-lighter">
+                    <div class="flex flex-col items-start gap-4">
+                        <div class="flex flex-col items-start gap-1">
+                            <p class="text-lg font-bold text-dark-dark-active">
+                                Emily Johnson
+                            </p>
+                            <p class="text-sm text-dark-normal">Data Analyst</p>
+                        </div>
+                        <p class="text-dark-normal">
+                            In publishing and graphic design, Lorem ipsum is a placeholder
+                            text commonly used to demonstrate the visual form of a
+                            document or a typeface without relying on meaningful content.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-start max-w-sm p-12 border rounded-lg gap-9 border-dark-lighter">
+                    <div class="flex flex-col items-start gap-4">
+                        <div class="flex flex-col items-start gap-1">
+                            <p class="text-lg font-bold text-dark-dark-active">
+                                Michael Brown
+                            </p>
+                            <p class="text-sm text-dark-normal">Web Developer</p>
+                        </div>
+                        <p class="text-dark-normal">
+                            In publishing and graphic design, Lorem ipsum is a placeholder
+                            text commonly used to demonstrate the visual form of a
+                            document or a typeface without relying on meaningful content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center px-5 py-16 text-white bg-primary">
+        <div class="inline-flex flex-col items-center justify-center gap-6 text-center md:max-w-2xl">
+            <p class="text-[40px] font-black leading-[48px]">
+                Reach out to Book an Appointment
+            </p>
+            <p class="text-lg">
+                Tutego conducts each seminar as a customized in-house seminar. All
+                of our seminars can also be attended as live online seminars. We
+                will be happy to help you register and find a suitable date.
+            </p>
+            <button class="px-12 py-4 text-lg font-medium bg-white rounded-md text-primary">
+                Get in touch
+            </button>
+        </div>
+    </div>
+    <div class="inline-flex flex-col items-start w-full gap-16 px-5 py-14 md:px-28 md:flex-row md:justify-between">
+        <div class="flex flex-col items-start gap-6 md:max-w-sm">
+            <img src="assets/svgs/logo.svg" alt="logo" class="w-40" />
+            <p class="text-dark-normal ">
+                At <span class="font-bold">tutego</span>,
+                we're passionate about shaping tech enthusiasts into
+                industry leaders. With a legacy of excellence, our seminars provide
+                hands-on learning, expert guidance, and cutting-edge insights. Join us
+                to fuel your IT journey and unlock a world of opportunities.
+            </p>
+            <div class="flex w-full rounded drop-shadow">
+                <input type="text" placeholder="Subscribe to our newsletter" class="w-full px-6 py-4" />
+                <button class="p-2 text-white rounded-md bg-primary">
+                    <img src="assets/svgs/send.svg" alt="sendIcon" />
+                </button>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+            <p class="text-lg font-bold text-primary">Popular seminars</p>
+            <div class="flex flex-col gap-2 5">
+                <p>Introduction to Java</p>
+                <p>Advanced Java</p>
+                <p>Java EE</p>
+                <p>Spring boat</p>
+                <p>Build Management Maven</p>
+                <p>JavaServer Faces (JSF)</p>
+                <p>PrimeFaces</p>
+                <p>Testing with JUnit</p>
+                <p>JavaScript</p>
+                <p>Secure web applications</p>
+                <p>Vue.js</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+            <p class="text-lg font-bold text-primary">Company</p>
+            <div class="flex flex-col gap-2 5">
+                <p>About</p>
+                <p>Leadership</p>
+                <p>Virtual seminars</p>
+                <p>Privacy policy</p>
+                <p>Counselor</p>
+                <p>Java is also an island</p>
+                <p>More than an island</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 text-dark-normal">
+            <p class="text-lg font-bold text-primary">Quick links</p>
+            <div class="flex flex-col gap-2 5">
+                <p>Seminars</p>
+                <p>Advice</p>
+                <p>FAQ</p>
+                <p>Credentials</p>
+                <p>Contact</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

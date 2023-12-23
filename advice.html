@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutego</title>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("./fonts/Satoshi/Satoshi-Regular.otf");
+      }
+    </style>
+    <link href="styles/index.css" rel="stylesheet">
+</head>
+
+<body class="font-satoshi">
+    <div class="flex flex-col font-satoshi">
+        <!-- TopRibbon -->
+        <div class="flex flex-col p-3 bg-primary md:flex-row md:justify-between md:px-28">
+            <div class="flex flex-wrap justify-center text-white divide-x">
+                <p class="px-4">
+                    Mobile:&nbsp;
+                    <a href="tel:+0800/8883467">0800/8883467</a>
+                </p>
+                <p class="px-4">
+                    Email:&nbsp;
+                    <a href="mailto:info@tutego.de">info@tutego.de</a>
+                </p>
+            </div>
+            <div class="flex justify-center gap-6 md:flex-row-reverse">
+                <div class="flex justify-center gap-6 py-1">
+                    <img src="assets/svgs/Linkedin.svg" alt="Linkedin" class="w-6 h-6" />
+                    <img src="assets/svgs/Youtube.svg" alt="Youtube" class="w-6 h-6" />
+                    <img src="assets/svgs/Twitter.svg" alt="Twitter" class="w-6 h-6" />
+                    <img src="assets/svgs/Facebook.svg" alt="Facebook" class="w-6 h-6" />
+                </div>
+                <div class="flex items-center gap-1 text-white">
+                    <p>English</p>
+                    <img src="assets/svgs/dropdown.svg" alt="Dropdown" />
+                </div>
+            </div>
+        </div>
+        <div class="relative flex items-center justify-between p-4 bg-white shadow-lg md:px-28">
+            <img src="assets/svgs/logo.svg" alt="logo" class="h-10 w-28 md:h-12" />
+            <button class="md:hidden" id="hamburger-icon-button">
+                <img src="assets/svgs/MenuIcon.svg" alt="menu" />
+            </button>
+            <div class="absolute right-1 flex flex-col text-white md:items-center md:justify-between md:gap-12 md:flex md:flex-row md:static bg-primary md:bg-transparent md:text-dark-dark-active top-[76px] rounded-md gap-3 p-2 md:p-0 hidden z-50"
+                id="nav-menu">
+                <nav>
+                    <ul class="flex flex-col items-center gap-3 md:flex-row md:gap-12">
+                        <li class="nav-link">
+                            <a href="/" class=""> Home </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/about.html" class=""> About </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/advice.html" class=""> Advice </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/seminar.html" class=""> Seminar </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/blog.html" class=""> Blog </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/contact.html">
+                    <button class="px-9 py-3.5 text-primary bg-white md:text-white rounded-md md:bg-primary">
+                        Get in touch
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="relative">
+            <img src="https://s3-alpha-sig.figma.com/img/89d3/4318/82fae885737ed1e64b1d950a2fdca0ea?Expires=1704067200&Signature=IOZA8a49llxMPuhag-O1H27~ml2OkP91KYuyqcyPyahjspHFQR9v9akhLrQHQqVSD4svLgaBXcPhqP~uXsxuRw2lmGEwPDItGQWb42JUhi0BU0L2zIKfC7IBxRqBZuJJHDdK9w6v1d3NZI2qAtSX2SdhvR1AXz8TRpvSJSeTdOV3THE~EqoPt7z3gUVJF8UmSHYtJbDCWwII~hTG-PvV6TB8csJrJ2xbpLacG7mUNglawVaT7QbXD43Cy9gcAQcM5hz4~DVIX826uphePmXcdwnor9nwLNgao6N539FIQUMCCREM8sq-aFlKNsqhocjKrmOEgYVmefU2ToakmOg4Tg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt="" class="object-cover min-w-full h-96 md:h-[700px]" />
+            <div class="absolute text-white left-10 bottom-10">
+                <p class="text-3xl font-black drop-shadow-2xl md:text-7xl">
+                    Create.Future.Together.
+                </p>
+                <p class="max-w-xl text-lg drop-shadow-2xl md:text-3xl">
+                    Actively shaping the future, jointly finding innovative solution to
+                    new challenges.
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col px-5 pb-20 pt-7 md:px-28 text-dark-normal">
+            <div class="flex flex-col gap-[18px]">
+                <p class="text-[32px] font-black text-primary">Advice</p>
+                <p class="">
+                    It is not only strategically and existentially important for modern
+                    companies to stay up to date when it comes to IT systems, it is also
+                    becoming increasingly difficult to keep track of the ever-expanding
+                    technology landscape.
+                </p>
+                <p>
+                    Not only does the technology alone produce keywords such as cloud
+                    native, AWS or SaaS, but management also introduces terms such as IT
+                    governance, EAM, BI, BPM. It is becoming increasingly difficult to
+                    choose the one that is important for your company from the wide
+                    range of solutions available. Especially in times when budgets are
+                    tight, optimal cost/benefit calculation is important.
+                </p>
+                <p>
+                    tutego advises your company or project groups on the planning,
+                    introduction, maintenance and further development of IT systems. We
+                    analyze your existing infrastructure and suggest solutions that
+                    tailor your investments to current and future requirements. We pay
+                    particular attention to software, hardware, security and data
+                    protection.
+                </p>
+                <p>
+                    Our IT consultants have many years of extensive knowledge of
+                    software technology and business administration in order to find the
+                    optimal solution for your company.
+                </p>
+                <div class="flex flex-col gap-2">
+                    <div class="flex gap-3">
+                        <p>→</p>
+                        <p>Requirements analysis (requirements engineering)</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <p>→</p>
+                        <p>Architecture and design</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <p>→</p>
+                        <p>Microservices and service-oriented architectures</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <p>→</p>
+                        <p>Conception, system selection and implementation</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <p>→</p>
+                        <p>Determination of future application landscapes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center px-5 py-16 text-white bg-primary">
+            <div class="inline-flex flex-col items-center justify-center gap-6 text-center md:max-w-2xl">
+                <p class="text-[40px] font-black leading-[48px]">Contact us</p>
+                <p class="text-lg">
+                    We&apos;re here to help. Contact us by email or on 0800/tutegos
+                    (free from all networks).
+                </p>
+                <button class="px-12 py-4 text-lg font-medium bg-white rounded-md text-primary">
+                    Get in touch
+                </button>
+            </div>
+        </div>
+        <div class="inline-flex flex-col items-start w-full gap-16 px-5 py-14 md:px-28 md:flex-row md:justify-between">
+            <div class="flex flex-col items-start gap-6 md:max-w-sm">
+                <img src="assets/svgs/logo.svg" alt="logo" class="w-40" />
+                <p class="text-dark-normal">
+                    At <span class="font-bold">tutego</span>, we're passionate about shaping tech enthusiasts into
+                    industry leaders. With a legacy of excellence, our seminars provide
+                    hands-on learning, expert guidance, and cutting-edge insights. Join
+                    us to fuel your IT journey and unlock a world of opportunities.
+                </p>
+                <div class="flex w-full rounded drop-shadow">
+                    <input type="text" placeholder="Subscribe to our newsletter" class="w-full px-6 py-4" />
+                    <button class="p-2 text-white rounded-md bg-primary">
+                        <img src="assets/svgs/send.svg" alt="sendIcon" />
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 text-dark-normal">
+                <p class="text-lg font-bold text-primary">Popular seminars</p>
+                <div class="flex flex-col gap-2 5">
+                    <p>Introduction to Java</p>
+                    <p>Advanced Java</p>
+                    <p>Java EE</p>
+                    <p>Spring boat</p>
+                    <p>Build Management Maven</p>
+                    <p>JavaServer Faces (JSF)</p>
+                    <p>PrimeFaces</p>
+                    <p>Testing with JUnit</p>
+                    <p>JavaScript</p>
+                    <p>Secure web applications</p>
+                    <p>Vue.js</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 text-dark-normal">
+                <p class="text-lg font-bold text-primary">Company</p>
+                <div class="flex flex-col gap-2 5">
+                    <p>About</p>
+                    <p>Leadership</p>
+                    <p>Virtual seminars</p>
+                    <p>Privacy policy</p>
+                    <p>Counselor</p>
+                    <p>Java is also an island</p>
+                    <p>More than an island</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 text-dark-normal">
+                <p class="text-lg font-bold text-primary">Quick links</p>
+                <div class="flex flex-col gap-2 5">
+                    <p>Seminars</p>
+                    <p>Advice</p>
+                    <p>FAQ</p>
+                    <p>Credentials</p>
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

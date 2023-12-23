@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutego</title>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("./fonts/Satoshi/Satoshi-Regular.otf");
+      }
+    </style>
+    <link href="styles/index.css" rel="stylesheet">
+</head>
+
+<body class="font-satoshi">
+    <div class="flex flex-col font-satoshi">
+        <!-- TopRibbon -->
+        <div class="flex flex-col p-3 bg-primary md:flex-row md:justify-between md:px-28">
+            <div class="flex flex-wrap justify-center text-white divide-x">
+                <p class="px-4">
+                    Mobile:&nbsp;
+                    <a href="tel:+0800/8883467">0800/8883467</a>
+                </p>
+                <p class="px-4">
+                    Email:&nbsp;
+                    <a href="mailto:info@tutego.de">info@tutego.de</a>
+                </p>
+            </div>
+            <div class="flex justify-center gap-6 md:flex-row-reverse">
+                <div class="flex justify-center gap-6 py-1">
+                    <img src="assets/svgs/Linkedin.svg" alt="Linkedin" class="w-6 h-6" />
+                    <img src="assets/svgs/Youtube.svg" alt="Youtube" class="w-6 h-6" />
+                    <img src="assets/svgs/Twitter.svg" alt="Twitter" class="w-6 h-6" />
+                    <img src="assets/svgs/Facebook.svg" alt="Facebook" class="w-6 h-6" />
+                </div>
+                <div class="flex items-center gap-1 text-white">
+                    <p>English</p>
+                    <img src="assets/svgs/dropdown.svg" alt="Dropdown" />
+                </div>
+            </div>
+        </div>
+        <div class="relative flex items-center justify-between p-4 bg-white shadow-lg md:px-28">
+            <img src="assets/svgs/logo.svg" alt="logo" class="h-10 w-28 md:h-12" />
+            <button class="md:hidden" id="hamburger-icon-button">
+                <img src="assets/svgs/MenuIcon.svg" alt="menu" />
+            </button>
+            <div class="absolute right-1 flex flex-col text-white md:items-center md:justify-between md:gap-12 md:flex md:flex-row md:static bg-primary md:bg-transparent md:text-dark-dark-active top-[76px] rounded-md gap-3 p-2 md:p-0 hidden z-50"
+                id="nav-menu">
+                <nav>
+                    <ul class="flex flex-col items-center gap-3 md:flex-row md:gap-12">
+                        <li class="nav-link">
+                            <a href="/" class=""> Home </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/about.html" class=""> About </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/advice.html" class=""> Advice </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/seminar.html" class=""> Seminar </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/blog.html" class=""> Blog </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/contact.html">
+                    <button class="px-9 py-3.5 text-primary bg-white md:text-white rounded-md md:bg-primary">
+                        Get in touch
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="relative">
+            <img src="https://s3-alpha-sig.figma.com/img/f0cd/e307/3d083231277e2246b09896c122ae24f6?Expires=1704067200&Signature=AO77VcINAz8pOtVUonT-rZsIbxSQtnWI0C9E0avq4qmMA8Lwu4hS564ntoYM4Y3EYPQ5sonKLMYgUZSKueVaagGv6yBS9doZc7SfZmtrmcSUOAEw9OUHeGOYRuVwFUuLpZSxq2pi6awL6nC~2AuWmdHvUnrlh03YUh9I0oC6njsMByUIomSh1nqlEVEFlYdIBdEwfUwI2RrE7CpiyHHKW7AcmCuiWYqn85C2wJihM3tMYFZr-od7KW2yymxxBf65R-153aQ0ds28MzokfDh3ciKIjdpORsxsP0WN2pAIXPxN7wUiLFVK4Xf4mq3WmhtT3icmw9Zp50uIDELE6-ID2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt="" class="object-cover min-w-full h-96" />
+            <p class="absolute text-3xl font-black text-white drop-shadow-2xl left-10 bottom-20">
+                Get in touch
+            </p>
+        </div>
+        <div class="flex flex-col px-5 py-12 md:px-28 text-dark-normal">
+            <p>
+                tutego® / Christian UllenboomSchloßstraße 547665 Sonsbeck / Germany
+            </p>
+            <div class="flex flex-col gap-[18px] mt-6 md:flex-row md:gap-20">
+                <div class="flex gap-6">
+                    <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-primary">
+                        <img src="assets/svgs/mail-read.svg" alt="mailReadIcon" />
+                    </div>
+                    <div>
+                        <a href="tel:+0800/8883467">
+                            <p>0800/tutegos (0800/8883467)</p>
+                        </a>
+                        <p>Free from all German networks</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-primary">
+                        <img src="assets/svgs/phone.svg" alt="phoneIcon" />
+                    </div>
+                    <a href="mailto:info@tutego.de">info@tutego.de</a>
+                </div>
+            </div>
+            <p class="mt-12">
+            <p>Managing Director: Dipl.-Inf. Christian Ullenboom</p>
+            <p>D-UNS number: 3414846600</p>
+            <p>VAT number: DE 190 748 917</p>
+            </p>
+            <div class="flex flex-col flex-wrap gap-10 mt-12 md:flex-row">
+                <div class="flex flex-col gap-[18px] max-w-sm md:w-96">
+                    <p class="text-xl font-bold text-primary">Legal Notice</p>
+                    <p class="">
+                        All rights to this online presence are reserved. The contents of
+                        this website can be used freely for personal use only.
+                        Unauthorized copying, reuse or modification of the design and
+                        content of the website is not permitted.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-[18px] max-w-sm md:w-96">
+                    <p class="text-xl font-bold text-primary">Brand</p>
+                    <p class="">
+                        tutego is a registered trademark of Christian Ullenboom. Other
+                        product names and product designations mentioned (Java, Microsoft,
+                        Oracle, SAP, ...) belong to the respective rights holders. tutego
+                        does not adopt these as its own through representation or naming.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-[18px] max-w-sm md:w-96">
+                    <p class="text-xl font-bold text-primary">Copyright</p>
+                    <p class="">
+                        The content and works on these pages created by the site operators
+                        are subject to German copyright law. Reproduction, processing,
+                        distribution and any kind of exploitation outside the limits of
+                        copyright law require the written consent of tutego.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-[18px] max-w-sm md:w-96">
+                    <p class="text-xl font-bold text-primary">Google Analytics</p>
+                    <p class="">
+                        This website uses Google Analytics.&nbsp;
+                        <a href="https://policies.google.com/privacy" class="underline underline-offset-4">
+                            Google Analytics
+                        </a>
+                        &nbsp;is an analysis tool from Google Inc. that stores cookies to
+                        analyze your visit. The information generated by this about your
+                        visit to our website (including your IP address) is stored
+                        automatically. This allows us, as site operators, to analyze which
+                        offers were of interest to you as a visitor. You can deactivate
+                        the Google Analytics function using&nbsp;
+                        <a href="https://tools.google.com/dlpage/gaoptout?hl=de" class="underline underline-offset-4">
+                            a browser add-on.
+                        </a>
+                        &nbsp;You will find information about our&nbsp;
+                        <a href="https://www.tutego.de/de/verwaltung/allgemeine_geschaeftsbedingungen_agb.html"
+                            class="underline underline-offset-4">
+                            general terms and conditions
+                        </a>
+                        &nbsp;and&nbsp;
+                        <a href="https://www.tutego.de/de/verwaltung/Datenschutzgrundverordnung-DSGVO-Datenschutzerkl%C3%A4rung.html"
+                            class="underline underline-offset-4">
+                            data protection declaration
+                        </a>
+                        &nbsp;on our own pages.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center px-5 py-16 text-white bg-primary">
+            <div class="inline-flex flex-col items-center justify-center gap-6 text-center md:max-w-2xl">
+                <p class="text-[40px] font-black leading-[48px]">Contact us</p>
+                <p class="text-lg">
+                    We&apos;re here to help. Contact us by email or on 0800/tutegos
+                    (free from all networks).
+                </p>
+                <button class="px-12 py-4 text-lg font-medium bg-white rounded-md text-primary">
+                    Get in touch
+                </button>
+            </div>
+        </div>
+        <div class="inline-flex flex-col items-start w-full gap-16 px-5 py-14 md:px-28 md:flex-row md:justify-between">
+            <div class="flex flex-col items-start gap-6 md:max-w-sm">
+                <img src="assets/svgs/logo.svg" alt="logo" class="w-40" />
+                <p class="text-dark-normal ">
+                    At <span class="font-bold">tutego</span>,
+                    we're passionate about shaping tech enthusiasts into
+                    industry leaders. With a legacy of excellence, our seminars provide
+                    hands-on learning, expert guidance, and cutting-edge insights. Join us
+                    to fuel your IT journey and unlock a world of opportunities.
+                </p>
+                <div class="flex w-full rounded drop-shadow">
+                    <input type="text" placeholder="Subscribe to our newsletter" class="w-full px-6 py-4" />
+                    <button class="p-2 text-white rounded-md bg-primary">
+                        <img src="assets/svgs/send.svg" alt="sendIcon" />
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 text-dark-normal">
+                <p class="text-lg font-bold text-primary">Popular seminars</p>
+                <div class="flex flex-col gap-2 5">
+                    <p>Introduction to Java</p>
+                    <p>Advanced Java</p>
+                    <p>Java EE</p>
+                    <p>Spring boat</p>
+                    <p>Build Management Maven</p>
+                    <p>JavaServer Faces (JSF)</p>
+                    <p>PrimeFaces</p>
+                    <p>Testing with JUnit</p>
+                    <p>JavaScript</p>
+                    <p>Secure web applications</p>
+                    <p>Vue.js</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 text-dark-normal">
+                <p class="text-lg font-bold text-primary">Company</p>
+                <div class="flex flex-col gap-2 5">
+                    <p>About</p>
+                    <p>Leadership</p>
+                    <p>Virtual seminars</p>
+                    <p>Privacy policy</p>
+                    <p>Counselor</p>
+                    <p>Java is also an island</p>
+                    <p>More than an island</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 text-dark-normal">
+                <p class="text-lg font-bold text-primary">Quick links</p>
+                <div class="flex flex-col gap-2 5">
+                    <p>Seminars</p>
+                    <p>Advice</p>
+                    <p>FAQ</p>
+                    <p>Credentials</p>
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
