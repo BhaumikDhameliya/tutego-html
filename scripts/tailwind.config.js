@@ -5,7 +5,10 @@ tailwind.config = {
         primary: "#F17800",
         dark: {
           active: "#090B0E",
-          normal: "#546881",
+          normal: {
+            DEFAULT: "#546881",
+            active: "#3D4C5E",
+          },
           lighter: "#B2BBC6",
           light: {
             hover: "#A3ADBB",
@@ -13,9 +16,21 @@ tailwind.config = {
           dark: {
             active: "#090B0E",
           },
+          border: "#2D3032",
         },
         orange: {
-          light: "#FEF2E6",
+          light: {
+            DEFAULT: "#FEF2E6",
+            active: "#FBD5B0",
+          },
+          dark: {
+            DEFAULT: "#542A00",
+            hover: "#914800",
+          },
+          darker: {
+            DEFAULT: "#542A00",
+          },
+          gradient: "#AC5601",
         },
         light: {
           light: {
